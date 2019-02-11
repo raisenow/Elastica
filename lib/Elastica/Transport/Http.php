@@ -112,6 +112,8 @@ class Http extends AbstractTransport
             }
         }
 
+        $headers[] = 'Content-Type: application/json'; // adt: set content-type explicitly
+
         // TODO: REFACTOR
         $data = $request->getData();
         $httpMethod = $request->getMethod();
